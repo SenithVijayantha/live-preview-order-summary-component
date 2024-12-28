@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Order summary card</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          colors: {
+            'pale-blue': 'hsl(225, 100%, 94%)',
+            'very-pale-blue': 'hsl(225, 100%, 98%)',
+            'bright-blue': 'hsl(245, 75%, 52%)',
+            'desaturated-blue': 'hsl(224, 23%, 55%)',
+            'dark-blue': 'hsl(223, 47%, 23%)'
+          },
+          screens: {
+            xs: "480px",
+            sm: "640px",
+            md: "768px",
+            lg: "1024px",
+            xl: "1280px",
+            "2xl": "1536px",
+          },
+          extend: {},
+        },
+      };
+    </script>
+
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+      
+    </div>
+
+    <!-- Order Summary
+
+  You can now listen to millions of songs, audiobooks, and podcasts on any 
+  device anywhere you like!
+
+  Annual Plan
+  $59.99/year
+
+  Change
+
+  Proceed to Payment
+  Cancel Order -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
