@@ -1,87 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
 
-    <title>Frontend Mentor | Order summary card</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
-    <!-- tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Order summary card</title>
 
-    <script>
-      tailwind.config = {
-        theme: {
-          colors: {
-            'pale-blue': 'hsl(225, 100%, 94%)',
-            'very-pale-blue': 'hsl(225, 100%, 98%)',
-            'bright-blue': 'hsl(245, 75%, 52%)',
-            'desaturated-blue': 'hsl(224, 23%, 55%)',
-            'dark-blue': 'hsl(223, 47%, 23%)'
-          },
-          screens: {
-            xs: "480px",
-            sm: "640px",
-            md: "768px",
-            lg: "1024px",
-            xl: "1280px",
-            "2xl": "1536px",
-          },
-          extend: {},
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+  <!-- tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        screens: {
+          'xs': "480px",
+          'sm': "640px",
+          'md': "768px",
+          'lg': "1024px",
+          'xl': "1280px",
+          '2xl': "1536px",
         },
-      };
-    </script>
+        extend: {
+          fontFamily: {
+            'sans': ['Poppins', 'sans-serif']
+          },
+          backgroundImage: {
+            'desktop-pattern': "url('/images/pattern-background-desktop.svg')",
+            'mobile-pattern': "url('/images/pattern-background-mobile.svg')"
+          },
+          colors: {
+            'custom-pale-blue': 'hsl(225, 100%, 94%)',
+            'custom-very-pale-blue': 'hsl(225, 100%, 98%)',
+            'custom-bright-blue': 'hsl(245, 75%, 52%)',
+            'custom-desaturated-blue': 'hsl(224, 23%, 55%)',
+            'custom-dark-blue': 'hsl(223, 47%, 23%)'
+          }
+        },
+      },
+    };
+  </script>
 
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .content-auto {
-          content-visibility: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
+  <style type="text/tailwindcss">
+    
+  </style>
+</head>
 
-    <div class="container">
-      
+<body>
+
+  <div class="container">
+
+  </div>
+
+  <body class="bg-custom-pale-blue bg-mobile-pattern bg-cover sm:bg-desktop-pattern">
+    <div class="container bg-white mx-auto m-10 max-w-[375px] rounded-3xl text-base shadow-gray-300 shadow-xl">
+      <div class="">
+        <img src="../images/illustration-hero.svg" alt="" class="bg-cover rounded-t-3xl">
+      </div>
+      <div class="py-6 container flex flex-col gap-6 px-8 text-center">
+        <div>
+          <h1 class="font-bold text-xl text-custom-dark-blue">Order Summary</h1>
+        </div>
+
+        <p class="text-center text-custom-desaturated-blue leading-6">You can now listen to millions of songs,
+          audiobooks, and podcasts on any
+          device anywhere you like!</p>
+
+        <div class="flex gap-14 items-center justify-center bg-slate-200 bg-opacity-60 w-full py-4 rounded-xl">
+          <div class="flex gap-6 items-center">
+            <img class="border-2 rounded-full border-white" src="../images/icon-music.svg" alt="">
+            <div class="">
+              <span class="text-sm font-semibold block">Annual Plan</span>
+              <span class="text-sm font-semibold text-custom-desaturated-blue block"> $59.99/year</span>
+            </div>
+          </div>
+          <div>
+            <a href="#" class="text-sm font-bold text-custom-bright-blue underline">Change</a>
+          </div>
+        </div>
+        <div class="">
+          <button
+            class="bg-custom-bright-blue text-white hover:bg-custom-dark-blue w-full py-4 font-semibold rounded-xl shadow-gray-400 shadow-xl transition-colors duration-300 ease-in-out">Proceed
+            to Payment</button>
+          <button class="font-semibold text-custom-desaturated-blue w-full py-4">Cancel Order</button>
+        </div>
+      </div>
     </div>
-
-    <!-- Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order -->
 
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a
+        href="#">Your Name Here</a>.
     </div>
   </body>
+
 </html>
